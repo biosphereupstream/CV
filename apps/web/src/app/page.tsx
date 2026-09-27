@@ -1,66 +1,54 @@
-import React from "react";
-import { HeaderBox } from "@/components/HeaderBox";
-import { ProfessionalSummary } from "@/components/ProfessionalSummary";
-import { TechnicalSkills } from "@/components/TechnicalSkills";
-import { WorkExperience } from "@/components/WorkExperience";
-import { ProjectHighlights } from "@/components/ProjectHighlights";
-import { CoffeeEnthusiast } from "@/components/CoffeeEnthusiast";
-import { KeyAchievements } from "@/components/KeyAchievements";
-import { Education } from "@/components/Education";
-import { Certifications } from "@/components/Certifications";
-import { ContactTerminal } from "@/components/ContactTerminal";
+"use client";
+
+import React, { useState } from "react";
+import { Navbar } from "@/components/Navbar";
+import { CyberCanvasHero } from "@/components/CyberCanvasHero";
+import { CorePillars } from "@/components/CorePillars";
+import { ProjectShowcases } from "@/components/ProjectShowcases";
+import { CoffeeSection } from "@/components/CoffeeSection";
+import { CareerTimeline } from "@/components/CareerTimeline";
+import { CertificationsWall } from "@/components/CertificationsWall";
+import { ContactSection } from "@/components/ContactSection";
+import { Footer } from "@/components/Footer";
+import { CVDrawerModal } from "@/components/CVDrawerModal";
 
 export default function HomePage() {
+  const [cvModalOpen, setCvModalOpen] = useState(false);
+
   return (
-    <div className="space-y-2">
-      {/* Executive Header Box */}
-      <HeaderBox />
+    <div className="min-h-screen bg-[#08090c] text-[#f1f5f9] relative selection:bg-[#0ea5e9] selection:text-[#08090c]">
+      {/* Floating Glass Dock Navbar */}
+      <Navbar onOpenCVModal={() => setCvModalOpen(true)} />
 
-      {/* Professional Summary */}
-      <ProfessionalSummary />
+      {/* Hero: Interactive 3D Cyber-Physical Canvas */}
+      <CyberCanvasHero onOpenCVModal={() => setCvModalOpen(true)} />
 
-      {/* Technical Skills & Domain Expertise */}
-      <TechnicalSkills />
+      {/* Core Engineering Pillars Bento Grid */}
+      <CorePillars />
 
-      {/* Professional Work Experience */}
-      <WorkExperience />
+      {/* Project Highlights with Live Simulators */}
+      <ProjectShowcases />
 
-      {/* Key Project Highlights with Interactive Simulators */}
-      <ProjectHighlights />
+      {/* Dedicated Luxury Coffee Feature: Biosphere Roast Works */}
+      <CoffeeSection />
 
-      {/* Passion & Venture: Coffee Enthusiast & Biosphere Roast Works */}
-      <CoffeeEnthusiast />
-
-      {/* Key Achievements & Quantified ROI */}
-      <KeyAchievements />
-
-      {/* Education */}
-      <Education />
+      {/* Interactive Career Timeline */}
+      <CareerTimeline />
 
       {/* Licenses & Professional Certifications */}
-      <Certifications />
+      <CertificationsWall />
 
-      {/* Executive Inquiry & Connection Terminal */}
-      <ContactTerminal />
+      {/* Modern Executive Inquiry Terminal */}
+      <ContactSection />
 
-      {/* Footer */}
-      <footer className="pt-6 mt-6 border-t border-[#e2e8f0] text-center text-xs text-[#64748b] flex flex-col sm:flex-row justify-between items-center gap-2">
-        <div>
-          © {new Date().getFullYear()} Agus Sobarna. All rights reserved.
-        </div>
-        <div className="flex items-center gap-3 text-[11px]">
-          <span>Mechatronics & Automation Specialist</span>
-          <span>•</span>
-          <a
-            href="https://biosphereroastworks.my.id"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#d97706] hover:underline font-bold"
-          >
-            biosphereroastworks.my.id
-          </a>
-        </div>
-      </footer>
+      {/* Minimalist Luxury Footer */}
+      <Footer />
+
+      {/* Slide-over ATS CV Drawer Modal */}
+      <CVDrawerModal
+        isOpen={cvModalOpen}
+        onClose={() => setCvModalOpen(false)}
+      />
     </div>
   );
 }

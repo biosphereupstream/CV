@@ -34,11 +34,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="bg-[#f1f5f9] text-[#1e293b] antialiased min-h-screen py-4 sm:py-8 px-2 sm:px-4 selection:bg-[#0284c7] selection:text-white">
-        <main className="max-w-[960px] mx-auto bg-white border border-[#e2e8f0] shadow-luxury rounded-sm p-4 sm:p-8 md:p-10 page-container">
-          {children}
-        </main>
+    <html lang="en" className="dark scroll-smooth">
+      <body className="bg-[#08090c] text-[#f1f5f9] antialiased min-h-screen selection:bg-[#0ea5e9] selection:text-[#08090c]">
+        {children}
       </body>
     </html>
   );
