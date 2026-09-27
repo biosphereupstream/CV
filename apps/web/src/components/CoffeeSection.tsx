@@ -1,13 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { coffeeEnthusiastData } from "@portfolio/shared";
-import { RoastCurveVisualizer } from "./RoastCurveVisualizer";
-import { Coffee, Flame, ExternalLink, Sparkles, ChevronDown, ChevronUp, ThermometerSnowflake } from "lucide-react";
+import { Coffee, ExternalLink, Sparkles } from "lucide-react";
 
 export function CoffeeSection() {
-  const [showCurve, setShowCurve] = useState(true);
-
   return (
     <section id="coffee" className="py-16 px-4 sm:px-6 max-w-6xl mx-auto">
       <div className="glass-panel-amber p-6 sm:p-10 rounded-3xl relative overflow-hidden transition-all duration-300">
@@ -56,7 +53,7 @@ export function CoffeeSection() {
         </p>
 
         {/* 3 Pillars */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 mb-8 relative z-10">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 relative z-10">
           {coffeeEnthusiastData.keyPillars.map((p, idx) => (
             <div
               key={idx}
@@ -73,30 +70,6 @@ export function CoffeeSection() {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Interactive Roaster Control Simulator */}
-        <div className="pt-6 border-t border-amber-900/60 relative z-10">
-          <div className="flex justify-between items-center mb-4">
-            <span className="text-xs sm:text-sm font-bold text-amber-200 flex items-center gap-2">
-              <Flame className="w-4 h-4 text-[#f59e0b]" />
-              Thermodynamic Process Control Loop & RoR Trajectory
-            </span>
-
-            <button
-              onClick={() => setShowCurve((prev) => !prev)}
-              className="text-xs font-mono font-bold text-amber-300 hover:text-white inline-flex items-center gap-1 transition-colors"
-            >
-              {showCurve ? "Hide Simulator" : "Inspect Roast Trajectory"}
-              {showCurve ? (
-                <ChevronUp className="w-3.5 h-3.5" />
-              ) : (
-                <ChevronDown className="w-3.5 h-3.5" />
-              )}
-            </button>
-          </div>
-
-          {showCurve && <RoastCurveVisualizer />}
         </div>
       </div>
     </section>

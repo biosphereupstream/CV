@@ -1,14 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { coffeeEnthusiastData } from "@portfolio/shared";
 import { SectionHeading } from "./SectionHeading";
-import { RoastCurveVisualizer } from "./RoastCurveVisualizer";
-import { Coffee, Flame, ExternalLink, Sparkles, ChevronDown, ChevronUp } from "lucide-react";
+import { Coffee, ExternalLink, Sparkles } from "lucide-react";
 
 export function CoffeeEnthusiast() {
-  const [showRoastSimulator, setShowRoastSimulator] = useState(true);
-
   return (
     <section className="mb-6">
       <SectionHeading
@@ -54,7 +51,7 @@ export function CoffeeEnthusiast() {
         </p>
 
         {/* 3 Pillars Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 mb-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
           {coffeeEnthusiastData.keyPillars.map((pillar, idx) => (
             <div
               key={idx}
@@ -69,29 +66,6 @@ export function CoffeeEnthusiast() {
               </p>
             </div>
           ))}
-        </div>
-
-        {/* Interactive Roaster Control Simulator Toggle */}
-        <div className="pt-2 border-t border-[#e2e8f0]">
-          <div className="flex justify-between items-center mb-3">
-            <span className="text-xs font-bold text-[#0f2942] flex items-center gap-1.5">
-              <Flame className="w-4 h-4 text-[#d97706]" />
-              Thermodynamic Control & RoR Trajectory Simulator
-            </span>
-            <button
-              onClick={() => setShowRoastSimulator((prev) => !prev)}
-              className="no-print text-xs font-semibold text-[#d97706] hover:text-[#92400e] inline-flex items-center gap-1"
-            >
-              {showRoastSimulator ? "Hide Curve" : "Inspect Roast Curve"}
-              {showRoastSimulator ? (
-                <ChevronUp className="w-3.5 h-3.5" />
-              ) : (
-                <ChevronDown className="w-3.5 h-3.5" />
-              )}
-            </button>
-          </div>
-
-          {showRoastSimulator && <RoastCurveVisualizer />}
         </div>
       </div>
     </section>
