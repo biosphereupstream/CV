@@ -180,7 +180,7 @@ export const projectHighlights: ProjectHighlightItem[] = [
       "Replaced physically grueling manual fertilizer distribution across large-scale plantations by engineering an intelligent computer vision algorithm (OpenCV + Python) that analyzes drone aerial imagery to detect and map palm oil trees.",
     outcome:
       "Successfully linked tree coordinates to automated fertilizer spreader machinery, achieving high detection accuracy (95%), substantial labor cost reductions (30%), and precise nutrient delivery.",
-    metrics: ["95% Detection Accuracy", "30% Labor Reduction", "$200,000/yr Saved"],
+    metrics: ["95% Detection Accuracy", "30% Labor Reduction", "Substantial OPEX Savings"],
     techTags: ["Python", "OpenCV", "Drone Aerial Geolocation", "Autonomous Machinery", "Edge Microcontrollers"],
     interactiveType: "drone-vision",
   },
@@ -249,14 +249,14 @@ export const keyAchievements: AchievementItem[] = [
   {
     headline: "On-Time CAPEX Execution",
     detail:
-      "Multi-scale capital expenditure modernization projects ($1M+) successfully delivered strictly on schedule through disciplined engineering management and contractor governance.",
-    metricBadge: "$1M+ Turnkey CAPEX",
+      "Multi-scale capital expenditure modernization projects successfully delivered strictly on schedule through disciplined engineering management and contractor governance.",
+    metricBadge: "100% On-Time CAPEX",
   },
   {
     headline: "Estate Labor & Cost Modernization",
     detail:
       "Achieved substantial labor reduction and operational efficiency in palm oil estates via proprietary computer vision and specialized machinery automation.",
-    metricBadge: "$200,000 / Year Savings",
+    metricBadge: "30% Labor Saved",
   },
   {
     headline: "Sustainable Energy Optimization",

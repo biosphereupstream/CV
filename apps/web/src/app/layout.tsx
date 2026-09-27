@@ -4,7 +4,7 @@ import "@/styles/globals.css";
 export const metadata: Metadata = {
   title: "Agus Sobarna | Mechatronics Engineer & Automation Specialist",
   description:
-    "Executive digital portfolio of Agus Sobarna: Mechatronics Engineer, Automation & Industry 4.0 Specialist, and Founder of Biosphere Roast Works. Delivering $1M+ CAPEX modernization and smart manufacturing solutions.",
+    "Executive digital portfolio of Agus Sobarna: Mechatronics Engineer, Automation & Industry 4.0 Specialist, and Founder of Biosphere Roast Works. Delivering turnkey CAPEX modernization and smart manufacturing solutions.",
   keywords: [
     "Agus Sobarna",
     "Mechatronics Engineer",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Agus Sobarna | Mechatronics Engineer & Automation Specialist",
     description:
-      "11+ years leading Industrial Automation, Industry 4.0, $1M+ CAPEX execution, and Biosphere Roast Works specialty coffee craft.",
+      "11+ years leading Industrial Automation, Industry 4.0, turnkey CAPEX execution, and Biosphere Roast Works specialty coffee craft.",
     type: "website",
     locale: "en_US",
   },

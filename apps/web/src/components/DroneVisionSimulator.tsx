@@ -87,7 +87,7 @@ export function DroneVisionSimulator() {
       </div>
 
       <div className="flex flex-wrap justify-between items-center text-xs font-mono text-slate-400 pt-3">
-        <span>Field validation: 30% labor reduction & \$200,000/yr OPEX savings at PT SMART Tbk.</span>
+        <span>Field validation: 30% labor reduction & substantial operational cost savings at PT SMART Tbk.</span>
         <span className="text-emerald-400 flex items-center gap-1 font-semibold">
           <CheckCircle className="w-3.5 h-3.5" /> Target Coordinates Linked to Hardware
         </span>

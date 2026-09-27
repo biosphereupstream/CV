@@ -155,7 +155,7 @@ export function CyberCanvasHero({ onOpenCVModal }: CyberCanvasHeroProps) {
 
         {/* Narrative / Executive Summary */}
         <p className="text-xs sm:text-sm md:text-base text-slate-400 max-w-2xl leading-relaxed mb-8">
-          Bridging physical Operational Technology (OT) with high-stakes plant performance. 11+ years delivering <span className="text-white font-semibold">$1M+ CAPEX modernizations</span>, autonomous robotics, AI computer vision, and founder of <span className="text-[#f59e0b] font-semibold">Biosphere Roast Works</span>.
+          Bridging physical Operational Technology (OT) with high-stakes plant performance. 11+ years delivering <span className="text-white font-semibold">turnkey CAPEX modernizations</span>, autonomous robotics, AI computer vision, and founder of <span className="text-[#f59e0b] font-semibold">Biosphere Roast Works</span>.
         </p>
 
         {/* CTA Buttons */}
@@ -181,10 +181,10 @@ export function CyberCanvasHero({ onOpenCVModal }: CyberCanvasHeroProps) {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 w-full max-w-3xl">
           <div className="glass-panel p-3 rounded-xl text-left">
             <div className="text-lg sm:text-2xl font-black font-mono text-white">
-              $1,000,000+
+              100%
             </div>
             <div className="text-[10px] sm:text-xs font-mono text-[#38bdf8] uppercase">
-              Turnkey CAPEX Modernization
+              On-Time CAPEX Delivery
             </div>
           </div>
 
