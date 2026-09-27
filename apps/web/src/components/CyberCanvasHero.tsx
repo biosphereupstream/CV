@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import { contactData } from "@portfolio/shared";
-import { ArrowDown, Cpu, Sparkles, Coffee, ShieldCheck, Activity } from "lucide-react";
+import { ArrowDown, Cpu, Sparkles, ShieldCheck, Activity } from "lucide-react";
 
 interface CyberCanvasHeroProps {
   onOpenCVModal: () => void;
@@ -167,14 +166,6 @@ export function CyberCanvasHero({ onOpenCVModal }: CyberCanvasHeroProps) {
           >
             <Activity className="w-4 h-4" />
             <span>Explore Engineering Works</span>
-          </a>
-
-          <a
-            href="#coffee"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs sm:text-sm font-bold bg-[#1c140d]/90 hover:bg-[#2a1d12] text-[#f59e0b] border border-[#d97706]/40 transition-all shadow-sm"
-          >
-            <Coffee className="w-4 h-4 text-[#f59e0b]" />
-            <span>Experience Biosphere Coffee</span>
           </a>
 
           <button

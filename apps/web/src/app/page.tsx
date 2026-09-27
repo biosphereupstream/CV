@@ -5,7 +5,6 @@ import { Navbar } from "@/components/Navbar";
 import { CyberCanvasHero } from "@/components/CyberCanvasHero";
 import { CorePillars } from "@/components/CorePillars";
 import { ProjectShowcases } from "@/components/ProjectShowcases";
-import { CoffeeSection } from "@/components/CoffeeSection";
 import { CareerTimeline } from "@/components/CareerTimeline";
 import { CertificationsWall } from "@/components/CertificationsWall";
 import { ContactSection } from "@/components/ContactSection";
@@ -28,9 +27,6 @@ export default function HomePage() {
 
       {/* Project Highlights with Live Simulators */}
       <ProjectShowcases />
-
-      {/* Dedicated Luxury Coffee Feature: Biosphere Roast Works */}
-      <CoffeeSection />
 
       {/* Interactive Career Timeline */}
       <CareerTimeline />

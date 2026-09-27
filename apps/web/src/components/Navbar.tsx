@@ -24,7 +24,6 @@ export function Navbar({ onOpenCVModal }: NavbarProps) {
     { label: "Overview", href: "#overview" },
     { label: "Pillars", href: "#pillars" },
     { label: "Projects", href: "#projects" },
-    { label: "Coffee Craft", href: "#coffee" },
     { label: "Career", href: "#career" },
     { label: "Credentials", href: "#credentials" },
   ];
