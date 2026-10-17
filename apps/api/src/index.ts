@@ -122,3 +122,4 @@ if (import.meta.main) {
 }
 
 export type App = typeof app;
+export default app;

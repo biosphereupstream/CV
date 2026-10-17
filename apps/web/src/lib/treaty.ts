@@ -4,7 +4,7 @@ import type { App } from "@portfolio/api";
 const apiUrl =
   typeof window !== "undefined"
     ? window.location.origin
-    : process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
+    : process.env.API_URL || process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3001";
 
 export const api = treaty<App>(apiUrl);
 
@@ -16,7 +16,16 @@ export async function submitInquiry(payload: {
   message: string;
 }) {
   try {
-    const res = await fetch("/api/v1/inquiries", {
+    const baseUrl =
+      typeof window !== "undefined"
+        ? ""
+        : process.env.API_URL || process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3001";
+
+    const endpoint = baseUrl
+      ? new URL("/api/v1/inquiries", baseUrl).toString()
+      : "/api/v1/inquiries";
+
+    const res = await fetch(endpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
@@ -32,7 +41,16 @@ export async function submitInquiry(payload: {
 
 export async function logTelemetry(eventType: string, metadata?: any) {
   try {
-    await fetch("/api/v1/telemetry", {
+    const baseUrl =
+      typeof window !== "undefined"
+        ? ""
+        : process.env.API_URL || process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3001";
+
+    const endpoint = baseUrl
+      ? new URL("/api/v1/telemetry", baseUrl).toString()
+      : "/api/v1/telemetry";
+
+    await fetch(endpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ eventType, metadata }),
